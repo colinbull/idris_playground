@@ -21,11 +21,13 @@ oneOneEqualOne = Refl
 
 ---- Integer ------
 
-assocUnderPlus : (a : Int)
-               -> (b : Int)
-               -> (c : Int)
+assocUnderPlus : (a : Integer)
+               -> (b : Integer)
+               -> (c : Integer)
                -> ((a + b) + c) = (a + (b + c))
-assocUnderPlus a b c = ?re
+assocUnderPlus a b c = 
+  let ih = assocUnderPlus a b c in
+  ?assocUnderPlus1 
 
 
  
