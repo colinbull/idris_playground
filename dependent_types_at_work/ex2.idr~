@@ -1,6 +1,0 @@
-module Exercise2
-
-subZero : (a: Nat) -> (b:Nat) -> Nat
-subZero a Z = a
-subZero a b = subZero (pred a) (pred b) 
-
