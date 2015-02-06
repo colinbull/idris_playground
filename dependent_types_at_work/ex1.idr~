@@ -1,0 +1,13 @@
+module Exercise1
+
+data Bool : Type where 
+  true : Bool 
+  false : Bool 
+  
+not : Bool -> Bool 
+not true = false 
+not false = false
+
+equiv : Bool -> Bool -> Bool 
+equiv true true = true
+equiv true false = false

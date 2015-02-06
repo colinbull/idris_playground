@@ -9,7 +9,7 @@ data Vect : Nat -> Type -> Type where
 (++) (x :: xs) ys = x :: xs ++ ys
 
 myVect : Vect 6 Integer
-myVect = (1 :: 2 :: 3 :: 4 :: 5 :: 6 :: Nil)
+myVect = (1 :: 2 :: 3 :: 4 :: 5 :: 6 :: 7 :: Nil)
 
 filter : (a -> Bool) -> Vect n a -> (p ** Vect p a)
 filter p [] = (_ ** [])

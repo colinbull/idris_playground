@@ -17,17 +17,24 @@ zeroOneEqualOne = Refl
 oneOneEqualOne : I `or` I = I
 oneOneEqualOne = Refl
 
+orAssoc : (a : Bit) 
+        -> (b : Bit)
+        -> (c : Bit)
+        -> (a `or` b) `or` c = a `or` (b `or` c)
+orAssoc O b c = Refl
+orAssoc I _ _ = Refl
+
+------ Interval --------
+
+data Interval : Nat -> Nat -> Type where
+     mkInterval : (start : Nat) -> (end : Nat) -> Interval start end
+
+int : Interval 1 3
+int = mkInterval 1 3
 
 
----- Integer ------
 
-assocUnderPlus : (a : Integer)
-               -> (b : Integer)
-               -> (c : Integer)
-               -> ((a + b) + c) = (a + (b + c))
-assocUnderPlus a b c = 
-  let ih = assocUnderPlus a b c in
-  ?assocUnderPlus1 
+
 
 
  
