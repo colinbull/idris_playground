@@ -15,3 +15,14 @@ subZero : (a: Nat) -> (b:Nat) -> Nat
 subZero a Z = a
 subZero a b = subZero (pred a) (pred b) 
 
+-- 2.3
+
+id : Type -> Type
+id x = x
+
+K : Type -> Type -> Type
+K a b = a
+
+S : (Type -> Type -> Type) -> (Type -> Type) -> Type -> Type
+S f g x = f x (g x) 
+ 
